@@ -1,0 +1,11 @@
+.alert-box {
+    background: rgb(130, 130, 251);
+    color: aliceblue;
+    padding: 20px;
+    border-radius: 5px;
+    display: none;
+}
+
+#title {
+    display: inline-block;
+}
