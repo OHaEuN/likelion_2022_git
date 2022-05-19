@@ -46,22 +46,21 @@
 //     document.querySelectorAll('.tab-content')[0].classList.add("show");
 // })
 
-document.querySelectorAll('.list')[0].addEventListener("click", function(e) {
+document.querySelectorAll(".list")[0].addEventListener("click", function(e) {
     tabBtn(e.target.dataset.id);
 });
 
 
 function tabBtn(a) {
-    document
-        .querySelctorAll('.tab-button')[a].addEventListener("click", function() {
-            for (
-                let i = 0; i < document.querySelctorAll(".tab-button").length; i++
-            ) {
-                document.querySelectorAll(".tab-button")[i].classList.remove("here");
-                document.querySelectorAll(".tab-button")[i].classList.remove("show");
-            }
+    document.querySelectorAll(".tab-button")[a].addEventListener("click", function() {
+        for (
+            let i = 0; i < document.querySelectorAll(".tab-button").length; i++
+        ) {
+            document.querySelectorAll(".tab-button")[i].classList.remove("here");
+            document.querySelectorAll(".tab-content")[i].classList.remove("show");
+        }
 
-            document.querySelectorAll(".tab-button")[a].classList.add("here");
-            document.querySelctorAll(".tab-content")[a].classList.add("show");
-        });
-}
+        document.querySelectorAll(".tab-button")[a].classList.add("here");
+        document.querySelectorAll(".tab-content")[a].classList.add("show");
+    })
+};

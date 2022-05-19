@@ -13,7 +13,7 @@
         .blue {
             width: 0px;
             height: 5px;
-            background-color: rgb(92, 100, 254);
+            background-color: rgb(182, 185, 242);
         }
         
         .lyrics {
@@ -33,14 +33,14 @@
         </p>
     </div>
     <script>
-        let bar = document.querySelector('.blue');
+        let bar = document.querySelector(".blue");
         let lyric = document.querySelector(".lyrics");
 
         lyric.addEventListener("scroll", function() {
             let scrollTop = lyric.scrollTop;
-            let scrollHeight = lyric.scrollHeight = lyric.clientHeight;
-            let per = scrollTop / scrollHeigth;
-            bar.style.width = `${per*250}px`;
+            let scrollHeight = lyric.scrollHeight - lyric.clientHeight;
+            let per = scrollTop / scrollHeight;
+            bar.style.width = `${per * 250}px`;
         });
     </script>
 

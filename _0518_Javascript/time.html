@@ -21,12 +21,12 @@
     <div class="timeout">7초 후에 내가 사라져볼게 얍</div>
     <script>
         var timecnt = 7;
-        setInteval(function() {
+        setInterval(function() {
             timecnt--;
             document.querySelector('.timeout').innerHTML = `${timecnt}초 후에 내가 사라져볼게 얍`;
         }, 1000);
         setTimeout(function() {
-            document.querySelctor('.timeout').style.display = "none";
+            document.querySelector('.timeout').style.display = "none";
 
         }, 7000);
     </script>
